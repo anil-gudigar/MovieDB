@@ -4,7 +4,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
+* Quick summary\
 Movie DB App using MVVM pattern. Used Databinding, Daager 2, Retrofit 2, OkHttp 3. Used Room Databased for persistence and Offline support.
 * Version 1.0
 
