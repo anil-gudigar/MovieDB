@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="poster_width">214dp</dimen>
+    <dimen name="poster_height">325dp</dimen>
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.app.common.data.model.Movie" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/detailslayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/app_height"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:expandedTitleMarginEnd="@dimen/toolbar_margin"
+                app:expandedTitleMarginStart="@dimen/toolbar_margin"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary">
+
+                    <ImageView
+                        android:id="@+id/imgbackdrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.3"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder"
+                        app:bindBackDropImageFromUrl="@{movie.backDropImageUrl}"/>
+
+                    <ImageView
+                        android:id="@+id/imgposter"
+                        android:layout_width="@dimen/poster_width"
+                        android:layout_height="@dimen/poster_height"
+                        android:layout_gravity="center"
+                        app:imageFromUrl="@{movie.completeImageUrl}"/>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:fontFamily="@font/googlesans_medium"
+                        android:layout_margin="@dimen/title_margin"
+                        android:text="@{movie.original_title}"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/text_color_intro_2"/>
+                </FrameLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <include
+                        android:id="@+id/vote_indicator"
+                        layout="@layout/vote_indicator"
+                        app:vote="@{movie.voteAverage}"
+                        app:votevalue="@{movie.voteAverageValue}" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/tv_width_ring"
+                            android:layout_height="@dimen/tv_width_ring"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/menu_margin"
+                            android:background="@drawable/ring"
+                            android:padding="@dimen/menu_padding"
+                            android:src="@drawable/baseline_list_white_18" />
+
+                        <ImageView
+                            android:layout_width="@dimen/tv_width_ring"
+                            android:layout_height="@dimen/tv_width_ring"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/menu_margin"
+                            android:background="@drawable/ring"
+                            android:padding="@dimen/menu_padding"
+                            android:src="@drawable/baseline_favorite_white_18" />
+
+                        <ImageView
+                            android:layout_width="@dimen/tv_width_ring"
+                            android:layout_height="@dimen/tv_width_ring"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/menu_margin"
+                            android:background="@drawable/ring"
+                            android:padding="@dimen/menu_padding"
+                            android:src="@drawable/baseline_bookmark_white_18" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/overview"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/googlesans_medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{movie.overview}"
+                        android:fontFamily="@font/googlesans_regular"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

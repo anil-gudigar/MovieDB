@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="vote_indicator_size">40dp</dimen>
+    <dimen name="tv_width">120dp</dimen>
+    <dimen name="tv_width_ring">40dp</dimen>
+    <dimen name="margin_voting_top">10dp</dimen>
+    <dimen name="margin_content">20dp</dimen>
+    <dimen name="menu_margin">10dp</dimen>
+    <dimen name="menu_padding">10dp</dimen>
+    <dimen name="menu_1_padding">10dp</dimen>
+    <dimen name="app_height">300dp</dimen>
+    <dimen name="toolbar_margin">64dp</dimen>
+    <dimen name="poster_width">180dp</dimen>
+    <dimen name="poster_height">200dp</dimen>
+    <dimen name="title_margin">15dp</dimen>
+</resources>

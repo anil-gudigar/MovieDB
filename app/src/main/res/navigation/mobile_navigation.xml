@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_discover">
+
+    <fragment
+        android:id="@+id/navigation_discover"
+        android:name="com.app.discover.ui.discover.DiscoverFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/discover_fragment" >
+        <action
+            android:id="@+id/action_navigation_discover_to_navigation_details"
+            app:destination="@id/navigation_details" />
+        <deepLink app:uri="moviedb://discover"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_details"
+        android:name="com.app.details.ui.details.DetailsFragment"
+        android:label="@string/title_details"
+        tools:layout="@layout/details_fragment" >
+        <deepLink app:uri="moviedb://details"/>
+    </fragment>
+</navigation>

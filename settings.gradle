@@ -1,0 +1,2 @@
+include ':app', ':discover', ':core', ':details', ':common'
+rootProject.name='MovieDB'

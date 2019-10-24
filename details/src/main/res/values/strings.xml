@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Details</string>
+    <string name="user_score">User Score</string>
+    <string name="overview">Overview</string>
+</resources>

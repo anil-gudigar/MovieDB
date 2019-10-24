@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0e1d32</color>
+    <color name="colorPrimaryDark">#1a293c</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="main_bg">#ff1100</color>
+    <color name="intro_bg">#ededed</color>
+    <color name="text_color_intro_1">#474747</color>
+    <color name="text_color_intro_2">#8e8e8e</color>
+    <color name="list_bg">#0e1d32</color>
+    <color name="list_item_bg">#1a293c</color>
+    <color name="list_item_title">#828d9f</color>
+    <color name="list_item_subtitle">#394659</color>
+
+    <color name="material_blue_700">#1976D2</color>
+    <color name="material_amber_700">#FFA000</color>
+    <color name="material_lime_700">#AFB42B</color>
+    <color name="material_purple_700">#7B1FA2</color>
+
+    <color name="bottom_navigation_selected">#3cd690</color>
+    <color name="bottom_navigation_normal">#38445a</color>
+</resources>
