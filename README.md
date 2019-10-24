@@ -11,7 +11,7 @@ Movie DB App using MVVM pattern. Used Databinding, Daager 2, Retrofit 2, OkHttp 
 ### How do I get set up? ###
 
 * Summary of set up\
-   Import Project to Android Studio\
+   Import Project to Android Studio
 * Configuration\
     Android Studio 3.5\
     compileSdkVersion = 29\
@@ -27,10 +27,10 @@ Movie DB App using MVVM pattern. Used Databinding, Daager 2, Retrofit 2, OkHttp 
     Room\
     Android X\
 * Database configuration\
-    Name: movie-db\
+    Name: movie-db
 * How to run tests\
-    Junit\
-* Deployment instructions\
+    Junit
+* Deployment instructions
 
 ### Contribution guidelines ###
 
