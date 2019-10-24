@@ -20,7 +20,6 @@ android {
         versionCode rootProject.appVersionCode
         versionName rootProject.appVersion
         vectorDrawables.useSupportLibrary true
-
     }
 
     buildTypes {
