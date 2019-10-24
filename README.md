@@ -17,7 +17,7 @@ Movie DB App using MVVM pattern. Used Databinding, Daager 2, Retrofit 2, OkHttp 
     compileSdkVersion = 29\
     minSdkVersion = 15\
     targetSdkVersion = 29\
-    buildtoolVersion = '29.0.2'\
+    buildtoolVersion = '29.0.2'
 * Dependencies\
     Kotlin\
     Databinding\
@@ -25,7 +25,7 @@ Movie DB App using MVVM pattern. Used Databinding, Daager 2, Retrofit 2, OkHttp 
     Retrofit 2\
     OkHttp 3\
     Room\
-    Android X\
+    Android X
 * Database configuration\
     Name: movie-db
 * How to run tests\
