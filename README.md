@@ -40,4 +40,4 @@ Movie DB App using MVVM pattern. Used Databinding, Daager 2, Retrofit 2, OkHttp 
 
 * Repo owner or admin
 * Other community or team contact
-![]i(https://github.com/anil-gudigar/MovieDB/blob/254df09d97421964bf6ae37c7ca3ebbe8feaf16b/MovieDB.gif) 
+![](https://github.com/anil-gudigar/MovieDB/blob/254df09d97421964bf6ae37c7ca3ebbe8feaf16b/MovieDB.gif) 
