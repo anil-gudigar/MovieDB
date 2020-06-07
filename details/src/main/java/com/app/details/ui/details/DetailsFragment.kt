@@ -25,7 +25,9 @@ class DetailsFragment : Fragment() , Injectable {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
+
     private lateinit var viewModel: DetailsViewModel
+
     private lateinit var movieid: String
     val ARG_MOVIEID = "movieid"
 
@@ -34,7 +36,9 @@ class DetailsFragment : Fragment() , Injectable {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         viewModel = injectViewModel(viewModelFactory)
+
         viewModel.id = movieid
 
         val binding = DetailsFragmentBinding.inflate(inflater, container, false)
